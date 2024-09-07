@@ -5,6 +5,8 @@ public interface ILista {
 
     void eliminarElemento(Object elementoaEliminar);
 
+    void pop();
+
     Nodo buscarElemento(Object elementoaBuscar);
 
     boolean seEncuentraElemento(Object elementoaEncontrar);

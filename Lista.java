@@ -24,12 +24,42 @@ public class Lista implements ILista {
 
     @Override
     public Nodo buscarElemento(Object elementoaBuscar) {
+        if (estaVacia()) {
+            System.out.println("No se puede buscar un elemento en la lista, ya que esta vacia.");
+            return null;
+        }
+        Nodo auxNodo = cabeza;
+        while (auxNodo != null) {
+            // if (auxNodo.getDato() == elementoaBuscar) {
+            if (auxNodo.getDato().equals(elementoaBuscar)) {
+                return auxNodo;
+            }
+            auxNodo = auxNodo.getEnlace();
+        }
         return null;
     }
 
     @Override
     public void eliminarElemento(Object elementoaEliminar) {
-
+        if (estaVacia()) {
+            System.out.println(":( No se puede eliminar: " + elementoaEliminar + ", la lista esta vacia.");
+            return;
+        }
+        if (cabeza.getDato().equals(elementoaEliminar)) {
+            cabeza = cabeza.getEnlace();
+            System.out.println(":) Elemento: " + elementoaEliminar + ", eliminado de la lista");
+            return;
+        }
+        Nodo auxNodo = cabeza;
+        while (auxNodo.getEnlace() != null) {
+            if (auxNodo.getEnlace().getDato().equals(elementoaEliminar)) {
+                auxNodo.setEnlace(auxNodo.getEnlace().getEnlace());
+                System.out.println(":) Elemento: " + elementoaEliminar + ", eliminado de la lista");
+                return;
+            }
+            auxNodo = auxNodo.getEnlace();
+        }
+        System.out.println(":( El elemento: " + elementoaEliminar + ", no se encuentra en la lista");
     }
 
     @Override
@@ -68,11 +98,31 @@ public class Lista implements ILista {
         return recorridoString;
     }
 
-    // TODO : Implementar el metodo recorrer lista, para hoy 22/08/2024
-    // practica en clase
     @Override
     public boolean seEncuentraElemento(Object elementoaEncontrar) {
+        if (estaVacia()) {
+            System.out.println("No se puede determinar si se encuentra un elemento en la lista, ya que esta vacia.");
+            return false;
+        }
+        Nodo auxNodo = cabeza;
+        while (auxNodo != null) {
+            // if (auxNodo.getDato() == elementoaBuscar) {
+            if (auxNodo.getDato().equals(elementoaEncontrar)) {
+                return true;
+            }
+            auxNodo = auxNodo.getEnlace();
+        }
         return false;
+    }
+
+    @Override
+    public void pop() {
+        if (estaVacia()) {
+            System.out.println("No se puede realizar el pop, ya que se encuentra vacia");
+        } else {
+            Nodo aux = cabeza;
+            cabeza = aux.getEnlace();
+        }
     }
 
 }
