@@ -1,24 +1,24 @@
 public class Nodo {
-    private Object dato;
+    private int dato;
     private Nodo enlaceSiguiente;
     private Nodo enlaceAnterior;
 
     public Nodo() {
-        dato = null;
+        dato = 0;
         enlaceSiguiente = null;
     }
 
-    public Nodo(Object dato) {
+    public Nodo(int dato) {
         this.dato = dato;
         enlaceSiguiente = null;
     }
 
-    public Nodo(Object dato, Nodo enlaceSiguiente) {
+    public Nodo(int dato, Nodo enlaceSiguiente) {
         this.dato = dato;
         this.enlaceSiguiente = enlaceSiguiente;
     }
 
-    public Nodo(Object dato, Nodo enlaceSiguiente, Nodo enlaceAnterior) {
+    public Nodo(int dato, Nodo enlaceSiguiente, Nodo enlaceAnterior) {
         this.dato = dato;
         this.enlaceSiguiente = enlaceSiguiente;
         this.enlaceAnterior = enlaceAnterior;
@@ -32,11 +32,11 @@ public class Nodo {
         this.enlaceSiguiente = enlaceSiguiente;
     }
 
-    public Object getDato() {
+    public int getDato() {
         return dato;
     }
 
-    public void setDato(Object dato) {
+    public void setDato(int dato) {
         this.dato = dato;
     }
 
