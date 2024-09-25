@@ -1,5 +1,5 @@
 public class Nodo {
-    private int dato;
+    private double dato;
     private Nodo enlaceSiguiente;
     private Nodo enlaceAnterior;
 
@@ -8,17 +8,17 @@ public class Nodo {
         enlaceSiguiente = null;
     }
 
-    public Nodo(int dato) {
+    public Nodo(double dato) {
         this.dato = dato;
         enlaceSiguiente = null;
     }
 
-    public Nodo(int dato, Nodo enlaceSiguiente) {
+    public Nodo(double dato, Nodo enlaceSiguiente) {
         this.dato = dato;
         this.enlaceSiguiente = enlaceSiguiente;
     }
 
-    public Nodo(int dato, Nodo enlaceSiguiente, Nodo enlaceAnterior) {
+    public Nodo(double dato, Nodo enlaceSiguiente, Nodo enlaceAnterior) {
         this.dato = dato;
         this.enlaceSiguiente = enlaceSiguiente;
         this.enlaceAnterior = enlaceAnterior;
@@ -32,11 +32,11 @@ public class Nodo {
         this.enlaceSiguiente = enlaceSiguiente;
     }
 
-    public int getDato() {
+    public double getDato() {
         return dato;
     }
 
-    public void setDato(int dato) {
+    public void setDato(double dato) {
         this.dato = dato;
     }
 

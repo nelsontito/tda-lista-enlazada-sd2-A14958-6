@@ -23,7 +23,7 @@ public class Lista implements ILista {
     }
 
     @Override
-    public Nodo buscarElemento(int elementoaBuscar) {
+    public Nodo buscarElemento(double elementoaBuscar) {
         if (estaVacia()) {
             System.out.println("No se puede buscar un elemento en la lista, ya que esta vacia.");
             return null;
@@ -39,7 +39,7 @@ public class Lista implements ILista {
     }
 
     @Override
-    public void eliminarElemento(int elementoaEliminar) {
+    public void eliminarElemento(double elementoaEliminar) {
         if (estaVacia()) {
             System.out.println(":( No se puede eliminar: " + elementoaEliminar + ", la lista esta vacia.");
             return;
@@ -76,7 +76,7 @@ public class Lista implements ILista {
     }
 
     @Override
-    public void insertarElemento(int elementoaInsertar) {
+    public void insertarElemento(double elementoaInsertar) {
         Nodo nuevoNodo = new Nodo(); // se crea un nodo vacio
         nuevoNodo.setDato(elementoaInsertar); // se agrega el dato al nuevo nodo
         nuevoNodo.setEnlace(cabeza); // el enlace del nuevo nodo es la cabeza
@@ -98,7 +98,7 @@ public class Lista implements ILista {
     }
 
     @Override
-    public boolean seEncuentraElemento(int elementoaEncontrar) {
+    public boolean seEncuentraElemento(double elementoaEncontrar) {
         if (estaVacia()) {
             System.out.println("No se puede determinar si se encuentra un elemento en la lista, ya que esta vacia.");
             return false;
