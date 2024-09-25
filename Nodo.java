@@ -4,7 +4,7 @@ public class Nodo {
     private Nodo enlaceAnterior;
 
     public Nodo() {
-        dato = 0;
+        dato = null;
         enlaceSiguiente = null;
     }
 

@@ -11,7 +11,7 @@ public interface ILista {
 
     boolean seEncuentraElemento(int elementoaEncontrar);
 
-    String recorrerLista();
+    int recorrerLista();
 
     boolean estaVacia();
 }
