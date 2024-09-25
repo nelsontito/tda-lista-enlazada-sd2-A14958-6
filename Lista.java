@@ -89,6 +89,7 @@ public class Lista implements ILista {
         if (estaVacia()) {
             return "No se puede recorrer la lista, ya que esta vacia.";
         }
+
         Nodo auxNodo = cabeza;
         while (auxNodo != null) {
             recorridoString = recorridoString + auxNodo.getDato() + " ";

@@ -6,16 +6,19 @@ public class TestLista {
 
     static int generarNumeroAleatorio(int extremoInferior, int extremoSuperior) {
         // return (int) (Math.random() * extremoSuperior) + 1;
-        return random.nextInt((extremoSuperior - extremoInferior) + 1) + extremoInferior;
+        return extremoInferior + ((extremoSuperior - extremoInferior) + 1) + extremoInferior;
     }
 
     static void generarListaNumerosEnterosAleatorios(Lista lista, int cantidadNumeros, int extremoInferior,
             int extremoSuperior) {
-        for (int indice = 0; indice <= cantidadNumeros; indice++)
-            lista.insertarElemento(generarNumeroAleatorio(extremoInferior, extremoSuperior));
-    }
+        for (int indice = 0; indice <= cantidadNumeros; indice++){
 
-    public static void main(int[] args) {
+            lista.insertarElemento(generarNumeroAleatorio(extremoInferior, extremoSuperior));
+        }
+    }
+    
+
+    public static void main(double[] args) {
         // prueba del tda lista
         Lista listaNumeros = new Lista();
 
@@ -25,21 +28,21 @@ public class TestLista {
         String listaString = listaNumeros.toString();
         System.out.println(listaString);
 
-         recorridoString = listaNumeros.recorrerLista();
+        String recorridoString = listaNumeros.recorrerLista();
         System.out.println(recorridoString);
         listaNumeros.pop();
 
-        int recorridoString2 = listaNumeros.recorrerLista();
+        String recorridoString2 = listaNumeros.recorrerLista();
         System.out.println(recorridoString2);
         listaNumeros.pop();
 
-        int recorridoString3 = listaNumeros.recorrerLista();
+        String recorridoString3 = listaNumeros.recorrerLista();
         System.out.println(recorridoString3);
         listaNumeros.pop();
         listaNumeros.pop();
         listaNumeros.pop();
 
-        int recorridoString4 = listaNumeros.recorrerLista();
+        String recorridoString4 = listaNumeros.recorrerLista();
         System.out.println(recorridoString4);
         System.out.println();
         System.out.println("********Pruebas a realizar para su respuesta**********");
@@ -50,21 +53,21 @@ public class TestLista {
         int testElementoAEliminar1 = generarNumeroAleatorio(10, 25);
         System.out.println("Elemento a eliminar: " + testElementoAEliminar1);
         listaNumeros.eliminarElemento(testElementoAEliminar1);
-        int recorridoString5 = listaNumeros.recorrerLista();
+        String recorridoString5 = listaNumeros.recorrerLista();
         System.out.println("Nueva Lista: " + recorridoString5);
         System.out.println();
 
         int testElementoAEliminar2 = generarNumeroAleatorio(10, 25);
         System.out.println("Elemento a eliminar: " + testElementoAEliminar2);
         listaNumeros.eliminarElemento(testElementoAEliminar2);
-        int recorridoString6 = listaNumeros.recorrerLista();
+        String recorridoString6 = listaNumeros.recorrerLista();
         System.out.println("Nueva Lista: " + recorridoString6);
         System.out.println();
 
         int testElementoAEliminar3 = generarNumeroAleatorio(10, 25);
         System.out.println("Elemento a eliminar: " + testElementoAEliminar3);
         listaNumeros.eliminarElemento(testElementoAEliminar3);
-        int recorridoString7 = listaNumeros.recorrerLista();
+        String recorridoString7 = listaNumeros.recorrerLista();
         System.out.println("Nueva Lista: " + recorridoString7);
         System.out.println();
 
