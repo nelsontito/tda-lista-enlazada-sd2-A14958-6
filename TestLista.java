@@ -4,14 +4,14 @@ public class TestLista {
 
     static Random random = new Random();
 
-    static Integer generarNumeroAleatorio(Object extremoInferior, Object extremoSuperior) {
+    static Integer generarNumeroAleatorio(Integer extremoInferior, Integer extremoSuperior) {
         // return (Object) (Math.random() * extremoSuperior) + 1;
         return random.nextInt((extremoSuperior - extremoInferior) + 1) + extremoInferior;
     }
 
-    static void generarListaNumerosEnterosAleatorios(Lista lista, Object cantidadNumeros, Object extremoInferior,
-            Object extremoSuperior) {
-        for (Object indice = 0; indice <= cantidadNumeros; indice++)
+    static void generarListaNumerosEnterosAleatorios(Lista lista, Integer cantidadNumeros, Integer extremoInferior,
+            Integer extremoSuperior) {
+        for (int indice = 0; indice <= cantidadNumeros; indice++)
             lista.insertarElemento(generarNumeroAleatorio(extremoInferior, extremoSuperior));
     }
 
